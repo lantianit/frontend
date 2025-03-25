@@ -11,29 +11,29 @@ import $ from 'jquery';
 
 class App extends Component {
     state = {
-        is_login: false,
-        username: "",
+        is_login: true,
+        username: "admin",
     };
 
-    componentDidMount() {
-        $.ajax({
-            url: "https://app165.acapp.acwing.com.cn/calculator/get_status/",
-            type: "get",
-            success: resp => {
-                console.log(resp);
-                if (resp.result === "login") {
-                    this.setState({
-                        is_login: true,
-                        username: resp.username,
-                    });
-                } else {
-                    this.setState({
-                        is_login: false,
-                    })
-                }
-            }
-        });
-    }
+    // componentDidMount() {
+    //     $.ajax({
+    //         url: "https://app165.acapp.acwing.com.cn/calculator/get_status/",
+    //         type: "get",
+    //         success: resp => {
+    //             console.log(resp);
+    //             if (resp.result === "login") {
+    //                 this.setState({
+    //                     is_login: true,
+    //                     username: resp.username,
+    //                 });
+    //             } else {
+    //                 this.setState({
+    //                     is_login: false,
+    //                 })
+    //             }
+    //         }
+    //     });
+    // }
 
     render() { 
         return (
